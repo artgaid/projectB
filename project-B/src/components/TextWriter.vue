@@ -217,6 +217,11 @@ setTimeout(() => {
 }
 
 @media only screen and (max-width: 600px) {
+  .writer {
+    height: 50px;
+  }
+
+
   .is-typed span.typed{
     font-size: 1em;
   }

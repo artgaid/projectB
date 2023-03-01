@@ -1,11 +1,11 @@
 <template>
-    <button class='glowing-btn'>
+    <a class='glowing-btn' :href="'https://t.me/+D7LCYevjlFsxMWRi'">
       <span class='glowing-txt'>
         C
         <span class='faulty-letter'>L</span>
         ICK
       </span>
-    </button>
+    </a>
 </template>
 
 <script setup lang="ts">
@@ -13,32 +13,6 @@
 </script>
 
 <style scoped lang="scss">
-
-.glowing-btn {
-  height: 70px;
-  position: relative;
-  color: var(--glow-color);
-  cursor: pointer;
-  padding: 0.35em 1em;
-  border: 0.15em solid var(--glow-color);
-  border-radius: 0.45em;
-  background: none;
-  perspective: 2em;
-  font-family: "Raleway", sans-serif;
-  font-size: 2em;
-  font-weight: 900;
-  letter-spacing: 1em;
-
-  -webkit-box-shadow: inset 0 0 0.5em 0 var(--glow-color),
-  0 0 0.5em 0 var(--glow-color);
-  -moz-box-shadow: inset 0 0 0.5em 0 var(--glow-color),
-  0 0 0.5em 0 var(--glow-color);
-  box-shadow: inset 0 0 0.5em 0 var(--glow-color),
-  0 0 0.5em 0 var(--glow-color);
-  animation: border-flicker 2s linear infinite;
-
-  //transition: all 0.3s ease-in-out;
-}
 
 .glowing-txt {
   float: left;
@@ -49,6 +23,33 @@
   0 0 0.45em var(--glow-color);
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
   animation: text-flicker 3s linear infinite;
+}
+
+.glowing-btn {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 1em;
+  outline: none;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+
+  -webkit-box-shadow: inset 0 0 0.5em 0 var(--glow-color),
+  0 0 0.5em 0 var(--glow-color);
+  -moz-box-shadow: inset 0 0 0.5em 0 var(--glow-color),
+  0 0 0.5em 0 var(--glow-color);
+  box-shadow: inset 0 0 0.5em 0 var(--glow-color),
+  0 0 0.5em 0 var(--glow-color);
+  animation: border-flicker 2s linear infinite;
 }
 
 .faulty-letter {
@@ -209,6 +210,7 @@
 
 @media only screen and (max-width: 600px) {
   .glowing-btn{
+    height: 50px;
     font-size: 1em;
   }
 }
